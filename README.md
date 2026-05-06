@@ -18,3 +18,11 @@ Ctrl+Alt+DefeatTheMarket → TomorrowQuantArchive
 7. Guide on “what quant should I be?”
 8. Guide on “How do I go further?”
 9. Who is the author?
+
+
+
+Add a "donate for x,y,z"
+1. We would love to have a proper URL and pay for hosting.
+2. We want to add a forum, discord, instagram, linkedin, etc.
+3. We would love to bundle up lots of information so everyone can get free access
+4. ...
