@@ -2,33 +2,40 @@ Ctrl+Alt+DefeatTheMarket → TomorrowQuantArchive
 
 ## Opening page
 
-NOTE: I want this to sound way more professional, I want something that offers clarity to both aspiring quants, university students and quants already in the industry.
+Welcome to Tomorrow Quant Archive — The unofficial guide to quantitative Finance
 
-The opening title should be something like, 
-- Welcome to Tomorrow (quant) Archive, an offshoot from Tomorrow Capital Research.
-- Offering Clarity in Complexity
-- The unofficial guide to quantitative finance.
+""Built for aspiring quants, university students, and practitioners who want structured, practical, and intellectually honest material on trading, research, and market structure.
 
-With the paragraph underneath being along the lines of:
-"This is the successor to Ctrl+Alt+DefeatTheMarket, which I built for participants at IMC Prosperity 4 and the KnowledgeBase, I build early on, to provide to readers at University of Copenhagen's Quant, Math and actuarial group.
-I have combined my work in both projects in order to offer you this dedicated solution, where my combined hard work, dedication, blood, sweat and tears have come to a result, satisfying my own high standards."
-
-or 
-
-"This website represents extensive efforts to compress and guide aspiring quants in a comprehensive, yet adjustable manner, we aim to compact and guide effectively, all information presented has been tailored with visuals, code, links and text to give you as effortless an experience of learning these complex materials. We will not be sharing any properitary works, but we will attempt to get as close as has been comfortable to us. You can find RELEVANT work, uncommon to most any other "Instagram gurus" attempting to sell you their courses, blogs, subscriptions and alike. THe best thing? We will not ask you to pay, but you are very welcome to drop a coin in our donations bucket."
+The archive brings together the work behind Ctrl+Alt+DefeatTheMarket, originally created for participants in IMC Prosperity 4, and the earlier KnowledgeBase developed for readers in the University of Copenhagen Quant, Mathematics, and Actuarial community. It is designed to make complex material easier to navigate without diluting the depth that serious learners require.""
 
 
 
 
 
 
-## What and who is this guide for?
+## What is this guide?
+
+""Tomorrow Quant Archive is an unofficial guide to quantitative finance, built for aspiring quants, university students, and practitioners who want structured, practical, and intellectually honest material on trading, research, and market structure.
+
+The archive brings together the work behind Ctrl+Alt+DefeatTheMarket, originally created for participants in IMC Prosperity 4, and the earlier KnowledgeBase developed for readers in the University of Copenhagen Quant, Mathematics, and Actuarial community. It is designed to make complex material easier to navigate without diluting the depth that serious learners require.""
+
+The Archive is an extensive range of pages, collections of resources, visualisations and guided "next step" processes.
+You can find help in guiding yourself towards competition participations, reading up on interviews, finding inspirational videos, channels, discord servers, forums and more.
+Be sure to read on for more branches into what you could use to secure yourself a space in quantitative finance.
+
+
+## who is it for?
+
+The archive serves as a unified piece for the previous work on Ctrl-Alt-DTM and The knowledgebase. The main purpose is to set up a super highway for aspiring quants to get from very early beginnings into baseline useful quantitative finance members.
+It has been our experience, that even passionate graduates fail to understand the baseline assumptions and procedures required in the algorithmic trading space.
+
+The goal will be to get aspiring quants up to speed quickly.
+Secondary to that will be to actually present useful and relevant quant work. 
+
 
 ## Getting started
 
 ### Challenges
-
-### Account setups
 
 ## The layers of quant
 
