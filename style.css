@@ -640,6 +640,10 @@ h2 {
 }
 
 
+
+
+
+
 /* =========================
    Refined institutional header
    ========================= */
@@ -719,7 +723,7 @@ h2 {
   font-weight: 700;
   line-height: 1;
   color: #0d1b3d;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.03em;
   white-space: nowrap;
   transition: font-size 0.25s ease;
 }
