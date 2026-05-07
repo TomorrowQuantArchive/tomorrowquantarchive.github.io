@@ -276,144 +276,259 @@ img {
    Hero
    ========================= */
 
+/* =========================
+   Hero background only
+   ========================= */
+
 .hero {
   position: relative;
   overflow: hidden;
-  margin: 2rem auto;
-  width: min(1200px, calc(100% - 2rem));
-  min-height: 620px;
-  border-radius: 32px;
+  width: 100%;
+  min-height: 720px;
   background:
-    linear-gradient(
-      180deg,
-      #f8fbff 0%,
-      #eef5fb 38%,
-      #dbe8f4 72%,
-      #cddded 100%
-    );
-  border: 1px solid rgba(100, 130, 170, 0.14);
-  box-shadow: var(--shadow-soft);
+    radial-gradient(circle at 78% 42%, rgba(125, 185, 235, 0.24), transparent 38%),
+    linear-gradient(115deg, #fbfdff 0%, #f3f8fc 42%, #e5f1fa 72%, #d6e9f7 100%);
+  border-top: 1px solid rgba(16, 32, 51, 0.06);
+  border-bottom: 1px solid rgba(16, 32, 51, 0.06);
 }
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 8rem 2rem 6rem;
-  text-align: center;
-}
-
-.hero-badge {
-  display: inline-block;
-  margin-bottom: 1.25rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: var(--radius-pill);
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(100, 130, 170, 0.16);
-  color: #4a5c73;
-  font-size: 0.9rem;
-  font-weight: 500;
-  backdrop-filter: blur(10px);
-}
-
-.hero h1 {
-  margin-bottom: 1rem;
-  font-size: clamp(2.4rem, 5vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-  color: #10243a;
-  font-weight: 600;
-}
-
-.hero-lede {
-  max-width: 700px;
-  margin: 0 auto 1rem;
-  font-size: 1.08rem;
-  line-height: 1.75;
-  color: #35506d;
-}
-
-.hero-subtext {
-  max-width: 720px;
-  margin: 0.75rem auto 0;
-  font-size: 0.98rem;
-  line-height: 1.75;
-  color: #56708b;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 0.9rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-/* Dotted background */
-
+/* subtle square grid */
 .hero-bg-grid {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    rgba(99, 146, 194, 0.42) 1.1px,
-    transparent 1.1px
-  );
-  background-size: 34px 34px;
+  background-image:
+    linear-gradient(rgba(16, 32, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
   mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.18)
+    rgba(0, 0, 0, 0.58),
+    rgba(0, 0, 0, 0.26)
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0.18)
+    rgba(0, 0, 0, 0.58),
+    rgba(0, 0, 0, 0.26)
   );
   pointer-events: none;
 }
 
-/* Decorative arcs */
-
-.hero-arc {
+/* right-side atmospheric glow */
+.hero-glow {
   position: absolute;
+  width: 860px;
+  height: 860px;
+  right: -240px;
+  top: -120px;
   border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 190, 245, 0.26) 0%,
+    rgba(120, 190, 245, 0.14) 34%,
+    transparent 68%
+  );
+  filter: blur(8px);
   pointer-events: none;
 }
 
-.hero-arc-one {
-  width: 900px;
-  height: 900px;
-  right: -420px;
-  bottom: -520px;
-  border: 2px solid rgba(125, 185, 235, 0.32);
-}
+/* =========================
+   Distribution curve system
+   ========================= */
 
-.hero-arc-two {
-  width: 1100px;
-  height: 1100px;
-  right: -560px;
-  bottom: -700px;
-  border: 2px solid rgba(125, 185, 235, 0.18);
-}
-
-.hero::before {
-  content: "";
+.distribution {
   position: absolute;
-  top: -80px;
-  left: 80px;
-  width: 2px;
-  height: 360px;
+  bottom: -2px;
+  height: 520px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/*
+  Each distribution is a large oval clipped by the hero.
+  The top border creates the bell curve line.
+  The translucent background creates the filled area.
+*/
+
+.curve {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -54%;
+  height: 100%;
+  border-radius: 50% 50% 0 0;
+  border-top: 2px solid rgba(70, 155, 220, 0.45);
   background: linear-gradient(
     to bottom,
-    rgba(125, 185, 235, 0.12),
-    rgba(125, 185, 235, 0.4),
-    rgba(125, 185, 235, 0.05)
+    rgba(95, 175, 230, 0.22),
+    rgba(95, 175, 230, 0.08) 48%,
+    rgba(95, 175, 230, 0.02) 100%
   );
-  transform: rotate(25deg);
+}
+
+/* wide low distribution */
+.distribution-wide {
+  left: 8%;
+  width: 88%;
+  height: 420px;
+  opacity: 0.72;
+}
+
+.curve-wide {
+  bottom: -68%;
+  border-top-color: rgba(85, 165, 220, 0.28);
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 185, 235, 0.13),
+    rgba(100, 185, 235, 0.04)
+  );
+}
+
+/* taller cyan distribution */
+.distribution-left {
+  left: 42%;
+  width: 34%;
+  height: 560px;
+  opacity: 0.72;
+}
+
+.curve-left {
+  bottom: -46%;
+  border-top-color: rgba(55, 175, 220, 0.46);
+  background: linear-gradient(
+    to bottom,
+    rgba(88, 210, 230, 0.2),
+    rgba(88, 210, 230, 0.07) 55%,
+    transparent
+  );
+}
+
+/* main central distribution */
+.distribution-main {
+  left: 52%;
+  width: 40%;
+  height: 650px;
+  opacity: 0.78;
+}
+
+.curve-main {
+  bottom: -48%;
+  border-top-color: rgba(85, 155, 230, 0.5);
+  background: linear-gradient(
+    to bottom,
+    rgba(95, 160, 235, 0.22),
+    rgba(95, 160, 235, 0.08) 58%,
+    transparent
+  );
+}
+
+/* softer right overlapping distribution */
+.distribution-right {
+  left: 60%;
+  width: 34%;
+  height: 520px;
+  opacity: 0.52;
+}
+
+.curve-right {
+  bottom: -50%;
+  border-top-color: rgba(60, 115, 180, 0.28);
+  background: linear-gradient(
+    to bottom,
+    rgba(80, 135, 205, 0.13),
+    rgba(80, 135, 205, 0.04) 58%,
+    transparent
+  );
+}
+
+/* =========================
+   Additional low flowing curves
+   ========================= */
+
+.soft-wave {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 0;
+  height: 280px;
+  border-radius: 50% 50% 0 0;
+  border-top: 1px solid rgba(70, 145, 210, 0.24);
   pointer-events: none;
 }
 
+.soft-wave-one {
+  bottom: -175px;
+  transform: rotate(-3deg);
+}
+
+.soft-wave-two {
+  bottom: -205px;
+  transform: rotate(4deg);
+  opacity: 0.72;
+}
+
+.soft-wave-three {
+  bottom: -230px;
+  transform: rotate(-8deg);
+  opacity: 0.48;
+}
+
+/* =========================
+   Mobile adjustments
+   ========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .distribution-wide {
+    left: -10%;
+    width: 120%;
+  }
+
+  .distribution-left {
+    left: 28%;
+    width: 58%;
+  }
+
+  .distribution-main {
+    left: 42%;
+    width: 68%;
+  }
+
+  .distribution-right {
+    left: 58%;
+    width: 64%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero-bg-grid {
+    background-size: 34px 34px;
+  }
+
+  .distribution-left {
+    left: 12%;
+    width: 78%;
+    height: 480px;
+  }
+
+  .distribution-main {
+    left: 28%;
+    width: 90%;
+    height: 540px;
+  }
+
+  .distribution-right {
+    left: 48%;
+    width: 86%;
+    height: 460px;
+  }
+}
 /* =========================
    Buttons
    ========================= */
