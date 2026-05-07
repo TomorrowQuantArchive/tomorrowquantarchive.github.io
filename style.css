@@ -276,15 +276,11 @@ img {
    Hero
    ========================= */
 
-/* =========================
-   Hero background only
-   ========================= */
-
 .hero {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 860px;
+  min-height: 800px;
   background:
     radial-gradient(circle at 78% 42%, rgba(125, 185, 235, 0.24), transparent 38%),
     linear-gradient(115deg, #fbfdff 0%, #f3f8fc 42%, #e5f1fa 72%, #d6e9f7 100%);
