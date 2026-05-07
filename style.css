@@ -273,252 +273,219 @@ img {
 }
 
 /* =========================
-   Hero
+   Hero - scatter plot style
    ========================= */
 
 .hero {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 800px;
+  min-height: 900px;
   background:
-    radial-gradient(circle at 78% 42%, rgba(125, 185, 235, 0.24), transparent 38%),
-    linear-gradient(115deg, #fbfdff 0%, #f3f8fc 42%, #e5f1fa 72%, #d6e9f7 100%);
-  border-top: 1px solid rgba(16, 32, 51, 0.06);
-  border-bottom: 1px solid rgba(16, 32, 51, 0.06);
+    radial-gradient(circle at 78% 28%, rgba(130, 190, 240, 0.22), transparent 38%),
+    radial-gradient(circle at 72% 72%, rgba(145, 205, 248, 0.14), transparent 34%),
+    linear-gradient(180deg, #f8fcff 0%, #edf6fc 52%, #e2eff8 100%);
+  border-top: 1px solid rgba(16, 32, 51, 0.05);
+  border-bottom: 1px solid rgba(16, 32, 51, 0.05);
 }
 
-/* subtle square grid */
+/* grid */
 .hero-bg-grid {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(16, 32, 51, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 32, 51, 0.045) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.58),
-    rgba(0, 0, 0, 0.26)
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.58),
-    rgba(0, 0, 0, 0.26)
-  );
+    linear-gradient(rgba(30, 70, 110, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 70, 110, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.8;
   pointer-events: none;
 }
 
-/* right-side atmospheric glow */
+/* soft wash on right */
 .hero-glow {
   position: absolute;
-  width: 860px;
-  height: 860px;
-  right: -240px;
+  right: -180px;
   top: -120px;
+  width: 900px;
+  height: 900px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(120, 190, 245, 0.26) 0%,
-    rgba(120, 190, 245, 0.14) 34%,
+    rgba(125, 190, 245, 0.24) 0%,
+    rgba(125, 190, 245, 0.12) 36%,
     transparent 68%
   );
-  filter: blur(8px);
+  filter: blur(10px);
   pointer-events: none;
 }
 
 /* =========================
-   Distribution curve system
+   Scatter clusters
    ========================= */
-.distribution {
+
+.scatter {
+  --dot-color: rgba(55, 125, 210, 0.55);
   position: absolute;
-  bottom: 0;
-  overflow: hidden;
   pointer-events: none;
+  background-image: radial-gradient(circle, var(--dot-color) 0 4px, transparent 4.8px);
+  background-size: 18px 18px;
+  background-repeat: repeat;
 }
 
-.curve {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -72%;
-  height: 100%;
-  border-radius: 50%;
-  border: 1.5px solid rgba(70, 155, 220, 0.28);
-  background: linear-gradient(
-    to bottom,
-    rgba(95, 175, 230, 0.16),
-    rgba(95, 175, 230, 0.05) 55%,
-    rgba(95, 175, 230, 0.01) 100%
-  );
+/* left cloud */
+.scatter-left {
+  --dot-color: rgba(90, 165, 235, 0.44);
+  left: 24%;
+  bottom: 150px;
+  width: 320px;
+  height: 180px;
+  opacity: 0.82;
+  mask-image: radial-gradient(ellipse at center, black 52%, rgba(0, 0, 0, 0.6) 72%, transparent 88%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 52%, rgba(0, 0, 0, 0.6) 72%, transparent 88%);
 }
 
-/* broad low background curve */
-.distribution-wide {
-  left: 10%;
-  width: 82%;
-  height: 340px;
-  bottom: 0;
-  opacity: 0.45;
+/* middle greenish-blue style cluster, but blue-toned */
+.scatter-mid {
+  --dot-color: rgba(45, 135, 215, 0.7);
+  left: 43%;
+  bottom: 170px;
+  width: 250px;
+  height: 190px;
+  opacity: 0.92;
+  mask-image: radial-gradient(ellipse at center, black 56%, rgba(0, 0, 0, 0.62) 74%, transparent 88%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 56%, rgba(0, 0, 0, 0.62) 74%, transparent 88%);
 }
 
-.curve-wide {
-  bottom: -82%;
-  border-color: rgba(85, 165, 220, 0.18);
-  background: linear-gradient(
-    to bottom,
-    rgba(100, 185, 235, 0.08),
-    rgba(100, 185, 235, 0.025) 65%,
-    transparent 100%
-  );
-}
-
-/* left overlapping bell */
-.distribution-left {
-  left: 42%;
-  width: 34%;
-  height: 520px;
-  bottom: 0;
-  opacity: 0.55;
-}
-
-.curve-left {
-  bottom: -74%;
-  border-color: rgba(75, 190, 225, 0.30);
-  background: linear-gradient(
-    to bottom,
-    rgba(88, 210, 230, 0.12),
-    rgba(88, 210, 230, 0.035) 60%,
-    transparent 100%
-  );
-}
-
-/* main bell curve */
-.distribution-main {
-  left: 52%;
-  width: 42%;
-  height: 580px;
-  bottom: 0;
-  opacity: 0.62;
-}
-
-.curve-main {
-  bottom: -76%;
-  border-color: rgba(95, 160, 235, 0.34);
-  background: linear-gradient(
-    to bottom,
-    rgba(95, 160, 235, 0.14),
-    rgba(95, 160, 235, 0.045) 62%,
-    transparent 100%
-  );
-}
-
-/* right softer overlap */
-.distribution-right {
-  left: 60%;
-  width: 36%;
-  height: 470px;
-  bottom: 0;
-  opacity: 0.34;
-}
-
-.curve-right {
-  bottom: -74%;
-  border-color: rgba(80, 135, 205, 0.18);
-  background: linear-gradient(
-    to bottom,
-    rgba(80, 135, 205, 0.08),
-    rgba(80, 135, 205, 0.02) 60%,
-    transparent 100%
-  );
-}
-
-/* =========================
-   Additional low flowing curves
-   ========================= */
-
-.soft-wave {
-  position: absolute;
-  left: -10%;
-  right: -10%;
+/* right denser cloud */
+.scatter-right {
+  --dot-color: rgba(70, 110, 220, 0.48);
+  right: 16%;
+  bottom: 260px;
+  width: 470px;
   height: 220px;
-  border-radius: 50%;
-  border-top: 1px solid rgba(70, 145, 210, 0.14);
-  pointer-events: none;
+  opacity: 0.88;
+  mask-image: radial-gradient(ellipse at center, black 56%, rgba(0, 0, 0, 0.58) 76%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 56%, rgba(0, 0, 0, 0.58) 76%, transparent 90%);
 }
 
-.soft-wave-one {
-  bottom: -155px;
-  transform: rotate(-2deg);
-}
-
-.soft-wave-two {
-  bottom: -185px;
-  transform: rotate(3deg);
-  opacity: 0.55;
-}
-
-.soft-wave-three {
-  bottom: -210px;
-  transform: rotate(-6deg);
-  opacity: 0.35;
+/* vertical band around x = 0 */
+.scatter-column {
+  --dot-color: rgba(15, 75, 220, 0.85);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 110px;
+  width: 18px;
+  height: 470px;
+  background-size: 18px 18px;
+  opacity: 0.95;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.18)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0.18)
+  );
 }
 
 /* =========================
-   Mobile adjustments
+   Loose dots / outliers
    ========================= */
 
-@media (max-width: 900px) {
+.loose-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(80, 150, 230, 0.22);
+  pointer-events: none;
+}
+
+.dot-1 { left: 12%; bottom: 210px; }
+.dot-2 { left: 18%; bottom: 260px; }
+.dot-3 { left: 34%; bottom: 325px; background: rgba(60, 135, 220, 0.18); }
+.dot-4 { left: 39%; bottom: 410px; background: rgba(95, 165, 235, 0.2); }
+.dot-5 { right: 27%; bottom: 520px; }
+.dot-6 { right: 22%; bottom: 600px; background: rgba(85, 160, 235, 0.18); }
+.dot-7 { right: 15%; bottom: 650px; background: rgba(95, 145, 225, 0.2); }
+.dot-8 { right: 10%; bottom: 430px; background: rgba(70, 130, 220, 0.18); }
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .scatter-left {
+    left: 14%;
+    width: 280px;
+    height: 160px;
+  }
+
+  .scatter-mid {
+    left: 39%;
+    width: 220px;
+    height: 170px;
+  }
+
+  .scatter-right {
+    right: 8%;
+    width: 360px;
+    height: 190px;
+  }
+
+  .scatter-column {
+    height: 410px;
+  }
+}
+
+@media (max-width: 720px) {
   .hero {
     min-height: 620px;
   }
 
-  .distribution-wide {
-    left: -10%;
-    width: 120%;
-  }
-
-  .distribution-left {
-    left: 28%;
-    width: 58%;
-  }
-
-  .distribution-main {
-    left: 42%;
-    width: 68%;
-  }
-
-  .distribution-right {
-    left: 58%;
-    width: 64%;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    min-height: 540px;
-  }
-
   .hero-bg-grid {
-    background-size: 34px 34px;
+    background-size: 32px 32px;
   }
 
-  .distribution-left {
-    left: 12%;
-    width: 78%;
-    height: 480px;
+  .scatter-left {
+    left: 6%;
+    bottom: 120px;
+    width: 220px;
+    height: 130px;
   }
 
-  .distribution-main {
-    left: 28%;
-    width: 90%;
-    height: 540px;
+  .scatter-mid {
+    left: 34%;
+    bottom: 150px;
+    width: 180px;
+    height: 150px;
   }
 
-  .distribution-right {
-    left: 48%;
-    width: 86%;
-    height: 460px;
+  .scatter-right {
+    right: -4%;
+    bottom: 220px;
+    width: 290px;
+    height: 150px;
+  }
+
+  .scatter-column {
+    bottom: 90px;
+    height: 330px;
+  }
+
+  .loose-dot {
+    width: 8px;
+    height: 8px;
   }
 }
 /* =========================
