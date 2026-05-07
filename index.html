@@ -10,13 +10,11 @@
 
 <body class="page-archive">
 <header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a class="brand" href="#" aria-label="Tomorrow Quant Archive home">
-      <img src="utils/logo.png" alt="Tomorrow Quant Archive logo" class="brand-logo" />
-      <div class="brand-lockup">
-        <span class="brand-text">Tomorrow Quant Archive</span>
-      </div>
-    </a>
+<div class="header-inner">
+<a class="brand" href="#" aria-label="Tomorrow Quant Archive home">
+<img src="utils/logo.png" alt="Tomorrow Quant Archive logo" class="brand-logo" />
+<span class="brand-text">Tomorrow Quant Archive</span>
+</a>
 
 <div class="menu-wrap">
 <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
@@ -24,12 +22,36 @@
 <span></span>
 <span></span>
 </button>
+</div>
+</div>
 
-<nav class="dropdown-menu" id="dropdownMenu" aria-label="Main navigation">
-<a href="#guide">Guide</a>
-<a href="#competitions">Competitions</a>
-<a href="#resources">Resources</a>
-<a href="#about">About</a>
+<div class="header-dropdown" id="headerDropdown">
+<div class="header-dropdown-inner">
+<div class="dropdown-intro">
+<h3>Archive Navigation</h3>
+<p>Explore the main sections of the archive.</p>
+</div>
+
+<nav class="dropdown-grid" aria-label="Main navigation">
+<a class="dropdown-card" href="#guide">
+<span class="dropdown-title">Guide</span>
+<span class="dropdown-desc">Structured learning routes, foundations, and orientation.</span>
+</a>
+
+<a class="dropdown-card" href="#competitions">
+<span class="dropdown-title">Competitions</span>
+<span class="dropdown-desc">Trading challenges, strategy notes, and competition breakdowns.</span>
+</a>
+
+<a class="dropdown-card" href="#resources">
+<span class="dropdown-title">Resources</span>
+<span class="dropdown-desc">Books, videos, forums, code, tools, and useful material.</span>
+</a>
+
+<a class="dropdown-card" href="#about">
+<span class="dropdown-title">About</span>
+<span class="dropdown-desc">The purpose, vision, and background of the archive.</span>
+</a>
 </nav>
 </div>
 </div>
@@ -194,38 +216,53 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    const siteHeader = document.getElementById("siteHeader");
     const menuToggle = document.getElementById("menuToggle");
-    const dropdownMenu = document.getElementById("dropdownMenu");
+    const headerDropdown = document.getElementById("headerDropdown");
 
-    if (!menuToggle || !dropdownMenu) return;
+    if (!siteHeader || !menuToggle || !headerDropdown) return;
+
+    function updateHeaderState() {
+      const hero = document.querySelector(".hero");
+      const heroHeight = hero ? hero.offsetHeight : 320;
+
+      if (window.scrollY > heroHeight - 100) {
+        siteHeader.classList.add("is-scrolled");
+      } else {
+        siteHeader.classList.remove("is-scrolled");
+      }
+    }
 
     menuToggle.addEventListener("click", function (event) {
       event.stopPropagation();
 
-      const isOpen = dropdownMenu.classList.toggle("is-open");
-
+      const isOpen = headerDropdown.classList.toggle("is-open");
       menuToggle.classList.toggle("is-open", isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-    dropdownMenu.querySelectorAll("a").forEach(function (link) {
+    headerDropdown.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        dropdownMenu.classList.remove("is-open");
+        headerDropdown.classList.remove("is-open");
         menuToggle.classList.remove("is-open");
         menuToggle.setAttribute("aria-expanded", "false");
       });
     });
 
     document.addEventListener("click", function (event) {
-      const clickedInsideMenu = dropdownMenu.contains(event.target);
       const clickedToggle = menuToggle.contains(event.target);
+      const clickedDropdown = headerDropdown.contains(event.target);
 
-      if (!clickedInsideMenu && !clickedToggle) {
-        dropdownMenu.classList.remove("is-open");
+      if (!clickedToggle && !clickedDropdown) {
+        headerDropdown.classList.remove("is-open");
         menuToggle.classList.remove("is-open");
         menuToggle.setAttribute("aria-expanded", "false");
       }
     });
+
+    window.addEventListener("scroll", updateHeaderState);
+    window.addEventListener("load", updateHeaderState);
+    updateHeaderState();
   });
 </script>
 </body>
