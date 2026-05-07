@@ -334,11 +334,6 @@ img {
 /* =========================
    Distribution curve system
    ========================= */
-
-/* =========================
-   Distribution curve system
-   ========================= */
-
 .distribution {
   position: absolute;
   bottom: 0;
@@ -448,30 +443,29 @@ img {
 
 .soft-wave {
   position: absolute;
-  left: -8%;
-  right: -8%;
-  bottom: 0;
-  height: 280px;
-  border-radius: 50% 50% 0 0;
-  border-top: 1px solid rgba(70, 145, 210, 0.24);
+  left: -10%;
+  right: -10%;
+  height: 220px;
+  border-radius: 50%;
+  border-top: 1px solid rgba(70, 145, 210, 0.14);
   pointer-events: none;
 }
 
 .soft-wave-one {
-  bottom: -175px;
-  transform: rotate(-3deg);
+  bottom: -155px;
+  transform: rotate(-2deg);
 }
 
 .soft-wave-two {
-  bottom: -205px;
-  transform: rotate(4deg);
-  opacity: 0.72;
+  bottom: -185px;
+  transform: rotate(3deg);
+  opacity: 0.55;
 }
 
 .soft-wave-three {
-  bottom: -230px;
-  transform: rotate(-8deg);
-  opacity: 0.48;
+  bottom: -210px;
+  transform: rotate(-6deg);
+  opacity: 0.35;
 }
 
 /* =========================
