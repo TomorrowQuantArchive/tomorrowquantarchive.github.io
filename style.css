@@ -284,7 +284,7 @@ img {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 720px;
+  min-height: 860px;
   background:
     radial-gradient(circle at 78% 42%, rgba(125, 185, 235, 0.24), transparent 38%),
     linear-gradient(115deg, #fbfdff 0%, #f3f8fc 42%, #e5f1fa 72%, #d6e9f7 100%);
@@ -335,108 +335,110 @@ img {
    Distribution curve system
    ========================= */
 
+/* =========================
+   Distribution curve system
+   ========================= */
+
 .distribution {
   position: absolute;
-  bottom: -2px;
-  height: 520px;
+  bottom: 0;
   overflow: hidden;
   pointer-events: none;
 }
-
-/*
-  Each distribution is a large oval clipped by the hero.
-  The top border creates the bell curve line.
-  The translucent background creates the filled area.
-*/
 
 .curve {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -54%;
+  bottom: -72%;
   height: 100%;
-  border-radius: 50% 50% 0 0;
-  border-top: 2px solid rgba(70, 155, 220, 0.45);
+  border-radius: 50%;
+  border: 1.5px solid rgba(70, 155, 220, 0.28);
   background: linear-gradient(
     to bottom,
-    rgba(95, 175, 230, 0.22),
-    rgba(95, 175, 230, 0.08) 48%,
-    rgba(95, 175, 230, 0.02) 100%
+    rgba(95, 175, 230, 0.16),
+    rgba(95, 175, 230, 0.05) 55%,
+    rgba(95, 175, 230, 0.01) 100%
   );
 }
 
-/* wide low distribution */
+/* broad low background curve */
 .distribution-wide {
-  left: 8%;
-  width: 88%;
-  height: 420px;
-  opacity: 0.72;
+  left: 10%;
+  width: 82%;
+  height: 340px;
+  bottom: 0;
+  opacity: 0.45;
 }
 
 .curve-wide {
-  bottom: -68%;
-  border-top-color: rgba(85, 165, 220, 0.28);
+  bottom: -82%;
+  border-color: rgba(85, 165, 220, 0.18);
   background: linear-gradient(
     to bottom,
-    rgba(100, 185, 235, 0.13),
-    rgba(100, 185, 235, 0.04)
+    rgba(100, 185, 235, 0.08),
+    rgba(100, 185, 235, 0.025) 65%,
+    transparent 100%
   );
 }
 
-/* taller cyan distribution */
+/* left overlapping bell */
 .distribution-left {
   left: 42%;
   width: 34%;
-  height: 560px;
-  opacity: 0.72;
+  height: 520px;
+  bottom: 0;
+  opacity: 0.55;
 }
 
 .curve-left {
-  bottom: -46%;
-  border-top-color: rgba(55, 175, 220, 0.46);
+  bottom: -74%;
+  border-color: rgba(75, 190, 225, 0.30);
   background: linear-gradient(
     to bottom,
-    rgba(88, 210, 230, 0.2),
-    rgba(88, 210, 230, 0.07) 55%,
-    transparent
+    rgba(88, 210, 230, 0.12),
+    rgba(88, 210, 230, 0.035) 60%,
+    transparent 100%
   );
 }
 
-/* main central distribution */
+/* main bell curve */
 .distribution-main {
   left: 52%;
-  width: 40%;
-  height: 650px;
-  opacity: 0.78;
+  width: 42%;
+  height: 580px;
+  bottom: 0;
+  opacity: 0.62;
 }
 
 .curve-main {
-  bottom: -48%;
-  border-top-color: rgba(85, 155, 230, 0.5);
+  bottom: -76%;
+  border-color: rgba(95, 160, 235, 0.34);
   background: linear-gradient(
     to bottom,
-    rgba(95, 160, 235, 0.22),
-    rgba(95, 160, 235, 0.08) 58%,
-    transparent
+    rgba(95, 160, 235, 0.14),
+    rgba(95, 160, 235, 0.045) 62%,
+    transparent 100%
   );
 }
 
-/* softer right overlapping distribution */
+/* right softer overlap */
 .distribution-right {
   left: 60%;
-  width: 34%;
-  height: 520px;
-  opacity: 0.52;
+  width: 36%;
+  height: 470px;
+  bottom: 0;
+  opacity: 0.34;
 }
 
 .curve-right {
-  bottom: -50%;
-  border-top-color: rgba(60, 115, 180, 0.28);
+  bottom: -74%;
+  border-color: rgba(80, 135, 205, 0.18);
   background: linear-gradient(
     to bottom,
-    rgba(80, 135, 205, 0.13),
-    rgba(80, 135, 205, 0.04) 58%,
-    transparent
+    rgba(80, 135, 205, 0.08),
+    rgba(80, 135, 205, 0.02) 60%,
+    transparent 100%
   );
 }
 
