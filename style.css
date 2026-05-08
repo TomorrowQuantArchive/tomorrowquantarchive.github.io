@@ -447,7 +447,7 @@ img {
 .hero-content h1 {
   margin: 0;
   font-family: "Noto Serif", serif;
-  font-size: clamp(3rem, 6.4vw, 6.4rem);
+  font-size: clamp(3rem, 6.4vw, 4rem);
   font-weight: 500;
   line-height: 0.94;
   letter-spacing: -0.05em;
