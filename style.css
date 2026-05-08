@@ -355,8 +355,8 @@ img {
 
   background-image: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.14) 0 4px,
-    transparent 4.8px
+    rgba(190, 225, 235, 0.25) 0 4px,
+    transparent 5.5px
   );
   background-size: 44px 44px;
   background-position: center bottom;
