@@ -285,6 +285,7 @@ img {
   overflow: hidden;
   width: 100%;
   min-height: 900px;
+  isolation: isolate;
 
   background: linear-gradient(
     to top,
@@ -299,7 +300,6 @@ img {
 
   border-top: 1px solid rgba(16, 32, 51, 0.05);
   border-bottom: 1px solid rgba(16, 32, 51, 0.05);
-  isolation: isolate;
 }
 
 /* subtle vertical line texture */
@@ -307,18 +307,18 @@ img {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
+  pointer-events: none;
 
   background: repeating-linear-gradient(
     to right,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 1px,
+    rgba(255, 255, 255, 0.045) 0px,
+    rgba(255, 255, 255, 0.045) 1px,
     transparent 1px,
     transparent 6px
   );
 
   opacity: 0.28;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* soft pale wash at the top */
@@ -326,6 +326,8 @@ img {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
+  pointer-events: none;
 
   background: linear-gradient(
     to bottom,
@@ -333,66 +335,130 @@ img {
     rgba(255, 255, 255, 0.20) 22%,
     rgba(255, 255, 255, 0.00) 52%
   );
+}
 
-  pointer-events: none;
+/* =========================
+   Decorative dots
+   ========================= */
+
+.hero-dots {
+  position: absolute;
+  left: clamp(28px, 5vw, 90px);
+  bottom: 0;
   z-index: 1;
+  pointer-events: none;
+
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(10px, 1vw, 16px);
+
+  width: min(36vw, 420px);
+  height: min(48vw, 500px);
+
+  opacity: 0.55;
 }
 
-/* any real content inside the hero */
-.hero > * {
-  position: relative;
-  z-index: 2;
+/* each column is a stack of dots */
+.dot-col {
+  width: clamp(20px, 1.7vw, 28px);
+  border-radius: 999px;
+  background-repeat: repeat-y;
+  background-position: center bottom;
+  background-size: 100% 42px;
+
+  /* soft, blended dots */
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.30) 0 6px,
+    transparent 6.7px
+  );
+
+  /* fade the top of each column slightly */
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.92) 72%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.92) 72%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
 }
+
+/* stepped/layered heights like the logo */
+.col-1 { height: 48px;  opacity: 0.95; }
+.col-2 { height: 92px;  opacity: 0.90; }
+.col-3 { height: 138px; opacity: 0.84; }
+.col-4 { height: 188px; opacity: 0.78; }
+.col-5 { height: 244px; opacity: 0.70; }
+.col-6 { height: 308px; opacity: 0.62; }
+.col-7 { height: 380px; opacity: 0.50; }
+
+/* optional softer topmost color shift */
+.col-6,
+.col-7 {
+  background-image: radial-gradient(
+    circle,
+    rgba(205, 232, 245, 0.34) 0 6px,
+    transparent 6.7px
+  );
+}
+
 /* =========================
    Hero content
    ========================= */
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 760px;
   margin: 0 auto;
-  padding: 390px 24px 0;
+  padding: 390px 24px 120px;
   text-align: center;
   color: #ffffff;
 }
 
 .hero-eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-content h1 {
   margin: 0;
   font-family: "Noto Serif", serif;
-  font-size: clamp(2.8rem, 6vw, 6rem);
-  font-weight: 400;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  font-size: clamp(3rem, 6.4vw, 6.4rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.05em;
   color: #ffffff;
 }
 
-.hero-content p {
-  max-width: 520px;
-  margin: 22px auto 0;
+.hero-content p:not(.hero-eyebrow) {
+  max-width: 580px;
+  margin: 24px auto 0;
   font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 28px;
-  padding: 11px 22px;
+  margin-top: 30px;
+  padding: 12px 22px;
   border-radius: 999px;
+  text-decoration: none;
 
   background: rgba(255, 255, 255, 0.92);
   color: #0b2d38;
-  text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
 
   box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
@@ -403,6 +469,7 @@ img {
   transform: translateY(-2px);
   background: #ffffff;
 }
+
 /* =========================
    Responsive
    ========================= */
@@ -413,14 +480,33 @@ img {
   }
 
   .hero-content {
-    padding-top: 320px;
+    padding-top: 300px;
+    padding-bottom: 100px;
   }
+
+  .hero-dots {
+    left: 24px;
+    width: 300px;
+    height: 360px;
+    gap: 10px;
+  }
+
+  .dot-col {
+    background-size: 100% 36px;
+  }
+
+  .col-1 { height: 42px; }
+  .col-2 { height: 78px; }
+  .col-3 { height: 118px; }
+  .col-4 { height: 158px; }
+  .col-5 { height: 205px; }
+  .col-6 { height: 262px; }
+  .col-7 { height: 320px; }
 }
 
 @media (max-width: 720px) {
   .hero {
-    min-height: 640px;
-
+    min-height: 620px;
     background: linear-gradient(
       to top,
       #062b38 0%,
@@ -436,18 +522,38 @@ img {
   }
 
   .hero-content {
-    padding: 270px 20px 0;
+    padding: 240px 20px 80px;
   }
 
   .hero-content h1 {
-    font-size: clamp(2.4rem, 12vw, 4rem);
+    font-size: clamp(2.6rem, 12vw, 4.2rem);
   }
 
-  .hero-content p {
+  .hero-content p:not(.hero-eyebrow) {
     font-size: 0.95rem;
   }
-}
 
+  .hero-dots {
+    left: 14px;
+    width: 210px;
+    height: 260px;
+    gap: 8px;
+    opacity: 0.42;
+  }
+
+  .dot-col {
+    width: 18px;
+    background-size: 100% 30px;
+  }
+
+  .col-1 { height: 30px; }
+  .col-2 { height: 56px; }
+  .col-3 { height: 82px; }
+  .col-4 { height: 112px; }
+  .col-5 { height: 146px; }
+  .col-6 { height: 184px; }
+  .col-7 { height: 228px; }
+}
 
 /* =========================
    Buttons
