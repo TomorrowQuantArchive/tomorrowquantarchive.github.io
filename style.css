@@ -276,10 +276,6 @@ img {
    Hero - soft gradient style
    ========================= */
 
-/* =========================
-   Hero - bottom-up gradient
-   ========================= */
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -343,67 +339,86 @@ img {
 
 .hero-dots {
   position: absolute;
-  left: clamp(28px, 5vw, 90px);
-  bottom: 0;
+  inset: 0;
   z-index: 1;
   pointer-events: none;
-
-  display: flex;
-  align-items: flex-end;
-  gap: clamp(10px, 1vw, 16px);
-
-  width: min(36vw, 420px);
-  height: min(48vw, 500px);
-
-  opacity: 0.55;
 }
 
-/* each column is a stack of dots */
-.dot-col {
-  width: clamp(20px, 1.7vw, 28px);
-  border-radius: 999px;
-  background-repeat: repeat-y;
-  background-position: center bottom;
-  background-size: 100% 42px;
+/* main dot grid */
+.hero-dots::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 78%;
 
-  /* soft, blended dots */
   background-image: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.30) 0 6px,
-    transparent 6.7px
+    rgba(255, 255, 255, 0.14) 0 4px,
+    transparent 4.8px
   );
+  background-size: 44px 44px;
+  background-position: center bottom;
+  background-repeat: repeat;
 
-  /* fade the top of each column slightly */
+  opacity: 0.75;
+
   mask-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.92) 72%,
-    rgba(0, 0, 0, 0.28) 100%
+    rgba(0, 0, 0, 0.95) 16%,
+    rgba(0, 0, 0, 0.72) 34%,
+    rgba(0, 0, 0, 0.42) 52%,
+    rgba(0, 0, 0, 0.16) 68%,
+    rgba(0, 0, 0, 0.03) 80%,
+    transparent 90%
   );
   -webkit-mask-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.92) 72%,
-    rgba(0, 0, 0, 0.28) 100%
+    rgba(0, 0, 0, 0.95) 16%,
+    rgba(0, 0, 0, 0.72) 34%,
+    rgba(0, 0, 0, 0.42) 52%,
+    rgba(0, 0, 0, 0.16) 68%,
+    rgba(0, 0, 0, 0.03) 80%,
+    transparent 90%
   );
 }
 
-/* stepped/layered heights like the logo */
-.col-1 { height: 48px;  opacity: 0.95; }
-.col-2 { height: 92px;  opacity: 0.90; }
-.col-3 { height: 138px; opacity: 0.84; }
-.col-4 { height: 188px; opacity: 0.78; }
-.col-5 { height: 244px; opacity: 0.70; }
-.col-6 { height: 308px; opacity: 0.62; }
-.col-7 { height: 380px; opacity: 0.50; }
+/* softer second layer for a nicer blend */
+.hero-dots::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 68%;
 
-/* optional softer topmost color shift */
-.col-6,
-.col-7 {
   background-image: radial-gradient(
     circle,
-    rgba(205, 232, 245, 0.34) 0 6px,
-    transparent 6.7px
+    rgba(190, 225, 240, 0.10) 0 3px,
+    transparent 3.8px
+  );
+  background-size: 30px 30px;
+  background-position: 15px bottom;
+  background-repeat: repeat;
+
+  opacity: 0.50;
+
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.65) 28%,
+    rgba(0, 0, 0, 0.22) 56%,
+    transparent 82%
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.65) 28%,
+    rgba(0, 0, 0, 0.22) 56%,
+    transparent 82%
   );
 }
 
