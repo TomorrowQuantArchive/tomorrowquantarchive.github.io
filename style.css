@@ -707,6 +707,397 @@ h2 {
   letter-spacing: 0.05em;
 }
 
+
+/* =========================
+   Guide section
+   ========================= */
+
+.guide-section {
+  padding-bottom: 6rem;
+}
+
+.guide-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-card);
+}
+
+.guide-label,
+.step-number {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  color: var(--blue-700);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.guide-copy h3,
+.guide-step-text h3,
+.materials-panel h3 {
+  margin-bottom: 0.8rem;
+  color: var(--navy-950);
+  font-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.guide-copy p,
+.guide-step-text p,
+.materials-panel p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.guide-copy p + p {
+  margin-top: 0.8rem;
+}
+
+/* path links */
+
+.guide-path-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.guide-path-links a {
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--blue-700);
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(7, 18, 37, 0.04);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.guide-path-links a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45, 141, 204, 0.35);
+  color: var(--blue-500);
+}
+
+/* intro visual */
+
+.guide-visual {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 24px;
+  background:
+    linear-gradient(rgba(16, 32, 51, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 70% 30%, rgba(86, 194, 255, 0.22), transparent 34%),
+    linear-gradient(135deg, #fafdff, #dcebf7);
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
+  border: 1px solid rgba(16, 32, 51, 0.08);
+}
+
+.map-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(16, 32, 51, 0.1);
+  color: var(--navy-900);
+  font-size: 0.78rem;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(7, 18, 37, 0.06);
+}
+
+.node-main {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--navy-900);
+  color: var(--white);
+}
+
+.node-one {
+  left: 10%;
+  top: 24%;
+}
+
+.node-two {
+  right: 12%;
+  top: 20%;
+}
+
+.node-three {
+  left: 14%;
+  bottom: 20%;
+}
+
+.node-four {
+  right: 16%;
+  bottom: 24%;
+}
+
+/* timeline */
+
+.guide-timeline {
+  display: grid;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.guide-step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.guide-step.reverse {
+  grid-template-columns: 420px minmax(0, 1fr);
+}
+
+.guide-step.reverse .guide-step-text {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.guide-step.reverse .guide-step-visual {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.guide-step-visual {
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(16, 32, 51, 0.08);
+  background:
+    linear-gradient(rgba(16, 32, 51, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, #fafdff, #dcebf7);
+  background-size: 32px 32px, 32px 32px, 100% 100%;
+}
+
+/* equation visual */
+
+.visual-equations {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  padding: 2rem;
+}
+
+.visual-equations span {
+  color: rgba(21, 94, 140, 0.72);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+/* books visual */
+
+.visual-books {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 2rem;
+}
+
+.visual-books div {
+  width: 54px;
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, #b9dff6, #155e8c);
+  box-shadow: 0 14px 28px rgba(7, 18, 37, 0.12);
+}
+
+.visual-books div:nth-child(1) {
+  height: 120px;
+}
+
+.visual-books div:nth-child(2) {
+  height: 170px;
+}
+
+.visual-books div:nth-child(3) {
+  height: 145px;
+}
+
+.visual-books div:nth-child(4) {
+  height: 200px;
+}
+
+/* code visual */
+
+.visual-code {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(86, 194, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, #071225, #102447);
+}
+
+.visual-code pre {
+  width: 100%;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* chart visual */
+
+.visual-chart::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(45, 141, 204, 0.32) 1.8px, transparent 2px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+}
+
+.chart-line {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  height: 180px;
+  border-top: 2px solid rgba(45, 141, 204, 0.36);
+  border-radius: 50%;
+}
+
+.line-one {
+  bottom: 20px;
+  transform: rotate(-5deg);
+}
+
+.line-two {
+  bottom: 55px;
+  transform: rotate(4deg);
+  opacity: 0.7;
+}
+
+.line-three {
+  bottom: 90px;
+  transform: rotate(-10deg);
+  opacity: 0.45;
+}
+
+/* materials panel */
+
+.materials-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 90% 20%, rgba(86, 194, 255, 0.16), transparent 30%),
+    linear-gradient(135deg, var(--navy-900), var(--blue-700));
+  color: var(--white);
+  box-shadow: var(--shadow-large);
+}
+
+.materials-panel h3,
+.materials-panel p,
+.materials-panel .section-kicker {
+  color: var(--white);
+}
+
+.materials-panel p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.materials-link {
+  flex-shrink: 0;
+  display: inline-flex;
+  padding: 0.9rem 1.2rem;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--navy-900);
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(7, 18, 37, 0.18);
+}
+
+/* responsive */
+
+@media (max-width: 980px) {
+  .guide-intro,
+  .guide-step,
+  .guide-step.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-step.reverse .guide-step-text,
+  .guide-step.reverse .guide-step-visual {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .guide-visual,
+  .guide-step-visual {
+    min-height: 240px;
+  }
+
+  .materials-panel {
+    display: grid;
+  }
+
+  .materials-link {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 620px) {
+  .guide-intro,
+  .guide-step,
+  .materials-panel {
+    padding: 1.25rem;
+  }
+
+  .guide-path-links a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .guide-visual,
+  .guide-step-visual {
+    min-height: 220px;
+  }
+
+  .map-node {
+    font-size: 0.7rem;
+    padding: 0.55rem 0.7rem;
+  }
+}
+
+
+
+
+
 /* =========================
    Competitions
    ========================= */
