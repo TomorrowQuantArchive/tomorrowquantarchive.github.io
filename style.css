@@ -280,7 +280,7 @@ img {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 900px;
+  min-height: 800px;
   isolation: isolate;
 
   background: linear-gradient(
