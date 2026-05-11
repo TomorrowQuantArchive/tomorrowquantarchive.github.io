@@ -280,7 +280,7 @@ img {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 800px;
+  min-height: 700px;
   isolation: isolate;
 
   background: linear-gradient(
@@ -429,7 +429,7 @@ img {
   z-index: 2;
   max-width: 760px;
   margin: 0 auto;
-  padding: 470px 24px 120px;
+  padding: 400px 24px 120px;
   text-align: center;
   color: #ffffff;
 }
