@@ -1688,9 +1688,9 @@ h2 {
 .intro-paper {
   position: relative;
   z-index: 2;
-  width: min(100%, 920px);
+  width: min(100%, 1180px);
   margin: 0 auto;
-  padding: clamp(34px, 4.6vw, 58px);
+ padding: clamp(28px, 4vw, 46px);
   border: 1px solid rgba(84, 76, 64, 0.18);
   border-radius: 2px;
   background:
@@ -1755,13 +1755,13 @@ h2 {
 .foreword-body {
   position: relative;
   color: #3d3b38;
-  font-size: clamp(0.98rem, 1.15vw, 1.06rem);
-  line-height: 1.9;
+  font-size: clamp(0.82rem, 0.92vw, 0.92rem);
+  line-height: 1.66;
 }
 
 .foreword-body p {
-  max-width: 72ch;
-  margin: 0 auto 1.35rem;
+  max-width: 116ch;
+  margin: 0 auto 0.82rem;
   color: #3f3c39;
 }
 
@@ -1777,7 +1777,7 @@ h2 {
   font-weight: 700;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1180px) {
   .intro-section {
     padding: 56px 1rem;
   }
@@ -1807,5 +1807,7 @@ h2 {
   .foreword-body {
     font-size: 0.95rem;
     line-height: 1.82;
+    column-count: 2;
+    column-gap: 48px;
   }
 }
