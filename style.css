@@ -1630,7 +1630,7 @@ h2 {
 
 /* =========================
    Intro paper section
-   Clean white section with fading light-blue dots
+   White section, blue dots, vintage note paper
    ========================= */
 
 .intro-section {
@@ -1638,31 +1638,27 @@ h2 {
   overflow: hidden;
   isolation: isolate;
   padding: clamp(72px, 10vw, 132px) 1.25rem;
-  background:
-    linear-gradient(180deg, #ffffff 0%, #f8fbfd 52%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfe 48%, #ffffff 100%);
   border-bottom: 1px solid rgba(16, 32, 51, 0.06);
 }
 
-/* pale blue atmosphere behind the dots */
 .intro-section::before {
   content: "";
   position: absolute;
-  inset: -20% -10%;
+  inset: -10% -8%;
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 46%, rgba(86, 194, 255, 0.16) 0%, rgba(86, 194, 255, 0.08) 34%, transparent 70%),
-    radial-gradient(ellipse at 18% 54%, rgba(45, 141, 204, 0.10) 0%, transparent 42%),
-    radial-gradient(ellipse at 82% 54%, rgba(45, 141, 204, 0.10) 0%, transparent 42%);
+    radial-gradient(ellipse at center, rgba(86, 194, 255, 0.14) 0%, rgba(86, 194, 255, 0.08) 24%, transparent 62%),
+    radial-gradient(ellipse at 15% 50%, rgba(31, 111, 168, 0.08) 0%, transparent 36%),
+    radial-gradient(ellipse at 85% 50%, rgba(31, 111, 168, 0.08) 0%, transparent 36%);
 }
 
-/* dot field: strongest near the centre, fading out to the sides */
 .intro-dot-field {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.9;
 }
 
 .intro-dot-field::before,
@@ -1672,139 +1668,144 @@ h2 {
   inset: 0;
   background-repeat: repeat;
   background-position: center;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, #000 34%, rgba(0, 0, 0, 0.55) 56%, transparent 82%);
-  mask-image: radial-gradient(ellipse at center, #000 0%, #000 34%, rgba(0, 0, 0, 0.55) 56%, transparent 82%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, #000 28%, rgba(0, 0, 0, 0.7) 48%, rgba(0, 0, 0, 0.28) 66%, transparent 86%);
+  mask-image: radial-gradient(ellipse at center, #000 0%, #000 28%, rgba(0, 0, 0, 0.7) 48%, rgba(0, 0, 0, 0.28) 66%, transparent 86%);
 }
 
 .intro-dot-field::before {
-  background-image: radial-gradient(circle, rgba(45, 141, 204, 0.24) 0 1.55px, transparent 1.85px);
+  background-image: radial-gradient(circle, rgba(45, 141, 204, 0.18) 0 1.4px, transparent 1.7px);
   background-size: 18px 18px;
+  opacity: 0.95;
 }
 
 .intro-dot-field::after {
-  opacity: 0.42;
-  background-image: radial-gradient(circle, rgba(86, 194, 255, 0.26) 0 2.6px, transparent 3px);
-  background-size: 42px 42px;
-  background-position: 9px 10px;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, rgba(0, 0, 0, 0.65) 42%, transparent 76%);
-  mask-image: radial-gradient(ellipse at center, #000 0%, rgba(0, 0, 0, 0.65) 42%, transparent 76%);
+  background-image: radial-gradient(circle, rgba(86, 194, 255, 0.12) 0 2.6px, transparent 3px);
+  background-size: 40px 40px;
+  background-position: 10px 10px;
+  opacity: 0.58;
 }
 
 .intro-paper {
   position: relative;
   z-index: 2;
-  width: min(100%, 980px);
+  width: min(100%, 920px);
   margin: 0 auto;
-  padding: clamp(34px, 5vw, 68px);
-  border: 1px solid rgba(16, 32, 51, 0.10);
-  border-radius: 6px;
+  padding: clamp(34px, 4.6vw, 58px);
+  border: 1px solid rgba(84, 76, 64, 0.18);
+  border-radius: 2px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.92)),
-    repeating-linear-gradient(0deg, rgba(16, 32, 51, 0.025) 0px, rgba(16, 32, 51, 0.025) 1px, transparent 1px, transparent 7px);
+    linear-gradient(180deg, rgba(246, 241, 232, 0.97), rgba(241, 236, 226, 0.96)),
+    repeating-linear-gradient(0deg, rgba(106, 95, 78, 0.028) 0px, rgba(106, 95, 78, 0.028) 1px, transparent 1px, transparent 5px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.18) 0px, rgba(255,255,255,0.18) 1px, transparent 1px, transparent 12px);
   box-shadow:
-    0 28px 90px rgba(7, 18, 37, 0.12),
-    0 2px 12px rgba(7, 18, 37, 0.04);
+    0 26px 80px rgba(7, 18, 37, 0.12),
+    0 2px 12px rgba(7, 18, 37, 0.05);
 }
 
 .intro-paper::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(21, 94, 140, 0.08);
+  inset: 10px;
+  border: 1px solid rgba(124, 113, 92, 0.14);
   pointer-events: none;
 }
 
-.intro-kicker {
-  margin-bottom: 18px;
-  color: #155e8c;
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+.intro-paper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(104, 92, 72, 0.12), transparent);
+  pointer-events: none;
+}
+
+.foreword-paper {
+  font-family: "Courier Prime", "Courier New", Courier, monospace;
+}
+
+.foreword-head {
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.foreword-head::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 54px;
+  height: 18px;
+  opacity: 0.45;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(183, 70, 100, 0.85) 0 1.8px, transparent 2px),
+    radial-gradient(ellipse at 50% 50%, rgba(183, 70, 100, 0.55) 0 9px, transparent 10px);
+}
+
+.foreword-line {
+  color: #8d6b63;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.intro-paper h2 {
-  max-width: 820px;
-  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-  color: #071225;
+.foreword-body {
+  position: relative;
+  color: #3d3b38;
+  font-size: clamp(0.98rem, 1.15vw, 1.06rem);
+  line-height: 1.9;
 }
 
-.intro-lede {
-  max-width: 760px;
-  margin-top: 22px;
-  color: #42536a;
-  font-size: clamp(1rem, 1.5vw, 1.12rem);
-  line-height: 1.78;
+.foreword-body p {
+  max-width: 72ch;
+  margin: 0 auto 1.35rem;
+  color: #3f3c39;
 }
 
-.intro-rule {
-  width: 100%;
-  height: 1px;
-  margin: clamp(26px, 4vw, 44px) 0;
-  background: linear-gradient(90deg, transparent, rgba(45, 141, 204, 0.34), transparent);
+.foreword-body p:last-child {
+  margin-bottom: 0;
 }
 
-.intro-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 32px);
+.foreword-body em {
+  font-style: italic;
 }
 
-.intro-note span {
-  display: inline-flex;
-  margin-bottom: 12px;
-  color: #2d8dcc;
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+.foreword-body strong {
+  font-weight: 700;
 }
 
-.intro-note h3 {
-  margin-bottom: 10px;
-  color: #102033;
-  font-size: 1.05rem;
-  line-height: 1.15;
-}
-
-.intro-note p {
-  color: #5e6f84;
-  font-size: 0.96rem;
-  line-height: 1.68;
-}
-
-.intro-closing {
-  margin-top: clamp(28px, 4vw, 46px);
-  padding-top: 22px;
-  border-top: 1px solid rgba(16, 32, 51, 0.08);
-}
-
-.intro-closing p {
-  color: #0f5c78;
-  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
-  line-height: 1.3;
-}
-
-@media (max-width: 900px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 620px) {
+@media (max-width: 720px) {
   .intro-section {
-    padding: 52px 1rem;
+    padding: 56px 1rem;
   }
 
   .intro-paper {
-    padding: 30px 22px;
+    padding: 26px 20px 30px;
   }
 
   .intro-paper::before {
     inset: 8px;
+  }
+
+  .intro-paper::after {
+    top: 54%;
+  }
+
+  .foreword-head {
+    padding-bottom: 16px;
+    margin-bottom: 18px;
+  }
+
+  .foreword-line {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .foreword-body {
+    font-size: 0.95rem;
+    line-height: 1.82;
   }
 }
