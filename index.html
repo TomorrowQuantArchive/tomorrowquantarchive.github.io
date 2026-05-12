@@ -1,693 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Tomorrow Quant Archive — the unofficial guide to quantitative finance." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tomorrow Quant Archive — a free, impartial map for learning quantitative finance by doing it." />
 
-<title>Tomorrow Archive</title>
-<link rel="icon" type="image/png" href="utils/Logo_new.png" />
+  <title>Tomorrow Quant Archive</title>
+  <link rel="icon" type="image/png" href="utils/Logo_new.png" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Serif:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="page-archive">
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Tomorrow Quant Archive home">
+        <img src="utils/Logo_new.png" alt="Tomorrow Quant Archive logo" class="brand-logo" />
+        <span class="brand-text">Tomorrow Archive</span>
+      </a>
 
-
-<header class="site-header" id="siteHeader">
-<div class="header-inner">
-<a class="brand" href="#" aria-label="Tomorrow Quant Archive home">
-<img src="utils/Logo_new.png" alt="Tomorrow Quant Archive logo" class="brand-logo" />
-<span class="brand-text">Tomorrow Archive</span>
-</a>
-
-<div class="menu-wrap">
-<button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div>
-</div>
-
-<div class="header-dropdown" id="headerDropdown">
-<div class="header-dropdown-inner">
-<div class="dropdown-intro">
-<h3>Archive Navigation</h3>
-<p>Explore the main sections of the archive.</p>
-</div>
-
-<nav class="dropdown-grid" aria-label="Main navigation">
-<a class="dropdown-card" href="#guide">
-<span class="dropdown-title">Guide</span>
-<span class="dropdown-desc">Structured learning routes, foundations, and orientation.</span>
-</a>
-
-<a class="dropdown-card" href="#competitions">
-<span class="dropdown-title">Competitions</span>
-<span class="dropdown-desc">Trading challenges, strategy notes, and competition breakdowns.</span>
-</a>
-
-<a class="dropdown-card" href="#resources">
-<span class="dropdown-title">Resources</span>
-<span class="dropdown-desc">Books, videos, forums, code, tools, and useful material.</span>
-</a>
-
-<a class="dropdown-card" href="#about">
-<span class="dropdown-title">About</span>
-<span class="dropdown-desc">The purpose, vision, and background of the archive.</span>
-</a>
-</nav>
-</div>
-</div>
-</header>
-  
-<main>
-<section class="hero">
-<div class="hero-dots" aria-hidden="true"></div>
-
-<div class="hero-content">
-<p class="hero-eyebrow">TOMORROW QUANT ARCHIVE</p>
-<h1>The Archive for Tomorrow’s Quants</h1>
-<p>
-A growing archive of quantitative finance notes, strategies, guides and research.
-</p>
-<a href="#" class="hero-button">Start reading</a>
-</div>
-</section>
-
-
-
-
-
-
-  
-
-  
-<section class="section guide-section" id="start">
-<div class="section-header">
-<div>
-<p class="section-kicker">Walk the archive</p>
-<h2>A guided entry point for learning, building, competing, and preparing.</h2>
-</div>
-<p class="section-lede">
-The archive should help readers choose a path rather than throwing every resource at them at once.
-</p>
-</div>
-
-<div class="guide-intro">
-<div class="guide-copy">
-<p class="guide-label">First orientation</p>
-<h3>Quantitative finance is not one single path.</h3>
-<p>
-Quantitative finance covers several related fields: credit risk in banks, actuarial science,
-algorithmic trading, systematic investing, quantamental investing, derivatives pricing, portfolio
-construction, and risk management.
-</p>
-<p>
-The goal of this archive is to help you understand where these areas overlap, where they differ,
-and which learning path makes sense for your own interests.
-</p>
-</div>
-
-<div class="guide-visual guide-visual-map" aria-hidden="true">
-<div class="map-node node-main">Quant Finance</div>
-<div class="map-node node-one">Banking</div>
-<div class="map-node node-two">Actuarial</div>
-<div class="map-node node-three">Algo Trading</div>
-<div class="map-node node-four">Risk</div>
-</div>
-</div>
-
-<div class="guide-path-links">
-<a href="https://tomorrowquantarchive.github.io/banking">Banking & Credit Risk →</a>
-<a href="https://tomorrowquantarchive.github.io/actuarial">Actuarial Science →</a>
-<a href="https://tomorrowquantarchive.github.io/algo">Algorithmic Trading →</a>
-<a href="https://tomorrowquantarchive.github.io/sys-invest">Systematic Investing →</a>
-<a href="https://tomorrowquantarchive.github.io/fund-invest">Quantamental Investing →</a>
-<a href="https://tomorrowquantarchive.github.io/risk">Risk Management →</a>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-<div class="guide-timeline">
-<article class="guide-step">
-<div class="guide-step-text">
-<span class="step-number">01</span>
-<h3>Start with mathematics and curiosity about finance.</h3>
-<p>
-Most people begin with some mix of probability, statistics, calculus, programming,
-economics, or a simple fascination with markets. You do not need to know the whole industry
-at the beginning. You need enough structure to avoid getting lost.
-</p>
-</div>
-
-<div class="guide-step-visual visual-equations" aria-hidden="true">
-<span>σ²</span>
-<span>∂V/∂t</span>
-<span>E[r]</span>
-<span>VaR</span>
-</div>
-</article>
-
-<article class="guide-step reverse">
-<div class="guide-step-text">
-<span class="step-number">02</span>
-<h3>Look around the industry before choosing your lane.</h3>
-<p>
-Banking, insurance, asset management, hedge funds, market makers, and trading firms use
-quantitative methods differently. Early on, it helps to sample books, videos, lectures,
-job descriptions, and competition writeups before deciding what to focus on.
-</p>
-</div>
-
-<div class="guide-step-visual visual-books" aria-hidden="true">
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-</article>
-
-<article class="guide-step">
-<div class="guide-step-text">
-<span class="step-number">03</span>
-<h3>Write your first Python scripts and pull real market data.</h3>
-<p>
-A practical first project is simple: install Python, load a price series with yfinance,
-calculate returns, plot moving averages, and test basic ideas. This turns abstract finance
-into something you can inspect, measure, and improve.
-</p>
-</div>
-
-<div class="guide-step-visual visual-code" aria-hidden="true">
-<pre><code>import yfinance as yf
-
-data = yf.download("SPY")
-returns = data["Close"].pct_change()</code></pre>
-</div>
-</article>
-
-<article class="guide-step reverse">
-<div class="guide-step-text">
-<span class="step-number">04</span>
-<h3>Build simple models before chasing complex strategies.</h3>
-<p>
-Before advanced machine learning or high-frequency trading, learn how to reason about
-returns, volatility, drawdowns, transaction costs, risk limits, and whether a backtest is
-actually telling you anything useful.
-</p>
-</div>
-
-<div class="guide-step-visual visual-chart" aria-hidden="true">
-<div class="chart-line line-one"></div>
-<div class="chart-line line-two"></div>
-<div class="chart-line line-three"></div>
-</div>
-</article>
-
-  
-<article class="guide-step">
-  <div class="guide-step-text">
-    <span class="step-number">05</span>
-    <h3>Connect with peers and learn in public.</h3>
-    <p>
-      Quant finance is easier to navigate when you are not learning alone. Join Discord servers,
-      forums, newsletters, YouTube channels, university societies, and competition communities where
-      beginners and experienced practitioners share resources, questions, projects, and ideas.
-    </p>
-  </div>
-
-  <div class="guide-step-visual visual-community" aria-hidden="true">
-    <div class="community-node node-center">Community</div>
-    <div class="community-node node-a">Discord</div>
-    <div class="community-node node-b">Forums</div>
-    <div class="community-node node-c">Newsletters</div>
-    <div class="community-node node-d">YouTube</div>
-    <div class="community-node node-e">Competitions</div>
-  </div>
-</article>
-
-
-  
-</div>
-  
-<div class="materials-panel" id="resources">
-<div>
-<p class="section-kicker">Materials list</p>
-<h3>Books, videos, code, forums, papers, and practical starting points.</h3>
-<p>
-The resources page collects useful material for different levels: beginner orientation,
-mathematical foundations, Python, market structure, options, risk, portfolio theory, and
-competition preparation.
-</p>
-</div>
-
-<a class="materials-link" href="https://tomorrowquantarchive.github.io/resources">
-Browse resources →
-</a>
-</div>
-  
-</section>
-
-<section class="community-directory">
-  <div class="directory-header">
-    <p class="section-kicker">05 · Community</p>
-    <h2>Quant finance community directory</h2>
-    <p>
-      A curated collection of public communities, creators, forums, and people worth following
-      if you are learning quantitative finance, algorithmic trading, market microstructure,
-      mathematical finance, or systematic research.
-    </p>
-  </div>
-
-  <div class="directory-grid">
-
-    <div class="directory-card">
-      <h3>Instagram</h3>
-      <p>Short-form quant, programming, macro, and research content.</p>
-      <ul>
-        <li><a href="https://www.instagram.com/mirkovicdev/" target="_blank" rel="noopener noreferrer">mirkovicdev</a></li>
-        <li><a href="https://www.instagram.com/quant_research_decoded/" target="_blank" rel="noopener noreferrer">quant_research_decoded</a></li>
-        <li><a href="https://www.instagram.com/macroglide/" target="_blank" rel="noopener noreferrer">macroglide</a></li>
-      </ul>
+      <div class="menu-wrap">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
 
-    <div class="directory-card">
-      <h3>LinkedIn groups</h3>
-      <p>Useful public groups for networking, research sharing, and industry discussions.</p>
-      <ul>
-        <li><a href="https://www.linkedin.com/groups/1087767/" target="_blank" rel="noopener noreferrer">International Association for Quantitative Finance</a></li>
-        <li><a href="https://www.linkedin.com/groups/2722737/" target="_blank" rel="noopener noreferrer">London Quant Group</a></li>
-        <li><a href="https://www.linkedin.com/groups/12877102/" target="_blank" rel="noopener noreferrer">Applied Quantitative Investment Management</a></li>
-        <li><a href="https://www.linkedin.com/groups/8826850/" target="_blank" rel="noopener noreferrer">Machine Learning and Quantitative Finance</a></li>
-        <li><a href="https://www.linkedin.com/groups/2206132/" target="_blank" rel="noopener noreferrer">Quant Finance / Quantitative Finance</a></li>
-      </ul>
+    <div class="header-dropdown" id="headerDropdown">
+      <div class="header-dropdown-inner">
+        <div class="dropdown-intro">
+          <h3>Archive Navigation</h3>
+          <p>Use this as a map. Pick the door that fits where you are.</p>
+        </div>
+
+        <nav class="dropdown-grid" aria-label="Main navigation">
+          <a class="dropdown-card" href="#what">
+            <span class="dropdown-title">What is this?</span>
+            <span class="dropdown-desc">The short purpose of the archive.</span>
+          </a>
+
+          <a class="dropdown-card" href="#why">
+            <span class="dropdown-title">Why it exists</span>
+            <span class="dropdown-desc">The bridge behind the project.</span>
+          </a>
+
+          <a class="dropdown-card" href="#read">
+            <span class="dropdown-title">How to read it</span>
+            <span class="dropdown-desc">Start from your current level.</span>
+          </a>
+
+          <a class="dropdown-card" href="#doors">
+            <span class="dropdown-title">The doors</span>
+            <span class="dropdown-desc">Routes into quant, trading, risk, and competitions.</span>
+          </a>
+        </nav>
+      </div>
     </div>
+  </header>
 
-    <div class="directory-card featured-card">
-      <h3>Strongly recommended people</h3>
-      <p>
-        People whose public work, writing, research, or professional presence is highly worth studying
-        if you want to understand quantitative finance more seriously.
-      </p>
-      <ul>
-        <li><a href="https://www.linkedin.com/in/bilokon/" target="_blank" rel="noopener noreferrer">Paul Bilokon</a></li>
-        <li><a href="https://www.linkedin.com/in/petercotton/" target="_blank" rel="noopener noreferrer">Peter Cotton</a></li>
-        <li><a href="https://www.linkedin.com/in/antonvorobets/" target="_blank" rel="noopener noreferrer">Anton Vorobets</a></li>
-        <li><a href="https://www.linkedin.com/in/gerko/" target="_blank" rel="noopener noreferrer">Alex Gerko</a></li>
-        <li><a href="https://www.linkedin.com/in/jean-philippe-bouchaud-bb08a15/" target="_blank" rel="noopener noreferrer">Jean-Philippe Bouchaud</a></li>
-        <li><a href="https://www.linkedin.com/in/lopezdeprado/" target="_blank" rel="noopener noreferrer">Marcos López de Prado</a></li>
-        <li><a href="https://www.linkedin.com/in/gappy/" target="_blank" rel="noopener noreferrer">Gappy</a></li>
-        <li><a href="https://www.linkedin.com/in/alejandro-rodriguez-dominguez-66b48015b/" target="_blank" rel="noopener noreferrer">Alejandro Rodriguez Dominguez</a></li>
-        <li><a href="https://www.linkedin.com/in/johannes-meyer-young-and-calculated/" target="_blank" rel="noopener noreferrer">Johannes Meyer</a></li>
-      </ul>
-    </div>
+  <main id="top">
+    <section class="archive-cover" aria-labelledby="archive-title">
+      <div class="dot-field" aria-hidden="true"></div>
+      <div class="cover-wash" aria-hidden="true"></div>
 
-    <div class="directory-card">
-      <h3>Forums</h3>
-      <p>Longer-form discussion spaces for quant finance, mathematical finance, and career questions.</p>
-      <ul>
-        <li><a href="https://wilmott.com/" target="_blank" rel="noopener noreferrer">Wilmott</a></li>
-        <li><a href="https://quantnet.com/forum/" target="_blank" rel="noopener noreferrer">QuantNet Forum</a></li>
-      </ul>
-    </div>
+      <article class="paper-card">
+        <p class="paper-eyebrow">Tomorrow Quant Archive</p>
 
-    <div class="directory-card wide-card">
-      <h3>YouTube channels</h3>
-      <p>Lectures, interviews, mathematics, macroeconomics, and quant finance learning resources.</p>
-      <ul class="link-columns">
-        <li><a href="https://www.youtube.com/@DimitriBianco" target="_blank" rel="noopener noreferrer">Dimitri Bianco</a></li>
-        <li><a href="https://www.youtube.com/@OxfordMCF" target="_blank" rel="noopener noreferrer">Oxford MCF</a></li>
-        <li><a href="https://www.youtube.com/@GResearchquantfinance" target="_blank" rel="noopener noreferrer">G-Research Quant Finance</a></li>
-        <li><a href="https://www.youtube.com/@PaulSweeting" target="_blank" rel="noopener noreferrer">Paul Sweeting</a></li>
-        <li><a href="https://www.youtube.com/@quantinsti" target="_blank" rel="noopener noreferrer">QuantInsti</a></li>
-        <li><a href="https://www.youtube.com/@OxfordMathematics" target="_blank" rel="noopener noreferrer">Oxford Mathematics</a></li>
-        <li><a href="https://www.youtube.com/@brightsideofmaths" target="_blank" rel="noopener noreferrer">The Bright Side of Mathematics</a></li>
-        <li><a href="https://www.youtube.com/@Oxford-Man-Institute" target="_blank" rel="noopener noreferrer">Oxford-Man Institute</a></li>
-        <li><a href="https://www.youtube.com/@LondonMathematicalSociety" target="_blank" rel="noopener noreferrer">London Mathematical Society</a></li>
-        <li><a href="https://www.youtube.com/@EconomicsExplained" target="_blank" rel="noopener noreferrer">Economics Explained</a></li>
-      </ul>
-    </div>
+        <h1 id="archive-title">A map for learning quantitative finance by actually doing it.</h1>
 
-  </div>
-</section>
+        <p class="paper-lede">
+          This is not a university syllabus. It is not a textbook. It is a practical archive:
+          a set of doors into quant finance, trading, risk, research, competitions, and market intuition.
+          Pick the one that fits where you are.
+        </p>
 
-  
-<section class="section competitions-section" id="competitions">
-<div class="section-header">
-<div>
-<p class="section-kicker">Quant competitions</p>
-<h2>Explore practical trading challenges, strategy games, and market-making competitions.</h2>
-</div>
-<p class="section-lede">
-A curated overview of competitions that help students and aspiring quants build real trading intuition.
-</p>
-</div>
+        <div class="paper-actions" aria-label="Primary actions">
+          <a class="button primary" href="#doors">Choose a door</a>
+          <a class="button secondary" href="https://tomorrowquantarchive.github.io/resources">Browse resources</a>
+        </div>
 
-<div class="competition-grid">
+        <div class="paper-divider"></div>
 
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/Crunch.png" alt="Crunch x ADIA Lab: Structural Breaks" />
-</div>
+        <div class="intro-grid">
+          <section class="intro-panel" id="what">
+            <span class="intro-number">01</span>
+            <h2>What is this?</h2>
+            <p>
+              The successor to the IMC Prosperity guide <strong>Ctrl+Alt+DefeatTheMarket</strong>
+              and the KnowledgeBase built for student maths, statistics, actuarial, and quant finance groups.
+              The aim is to keep the material free, impartial, non-commercial, and useful.
+            </p>
+          </section>
 
-<div class="competition-content">
-<div class="competition-meta">Time series · Structural breaks · Machine learning</div>
-<h3>CrunchDAO Structural Breaks</h3>
-<p>
-A data science competition focused on identifying structural breaks in time series, combining
-statistical modelling, machine learning, and robust signal detection.
-</p>
+          <section class="intro-panel" id="why">
+            <span class="intro-number">02</span>
+            <h2>Why does it exist?</h2>
+            <p>
+              It exists because a lot of useful quant knowledge is scattered, hidden behind status games,
+              or only discovered after wasting months. This archive turns that accumulated effort into stepping stones:
+              if we cannot all cross the river easily, we can at least build a bridge.
+            </p>
+          </section>
 
-<div class="competition-tags">
-<span>Time series</span>
-<span>Structural breaks</span>
-<span>ML</span>
-</div>
+          <section class="intro-panel" id="read">
+            <span class="intro-number">03</span>
+            <h2>How should I read it?</h2>
+            <p>
+              Start where you are. From “I have no clue”, move towards “I know what quant is”, then towards
+              “I know what I want to build”, and eventually towards “I know what strategy fits this regime”.
+              The jokes are not gone; they have merely been risk-managed.
+            </p>
+          </section>
+        </div>
+      </article>
+    </section>
 
-<p class="competition-status">The competition is available now until September 2026</p>
-<a 
-class="competition-link" 
-href="https://www.adialab.ae/adia-lab-x-crunch-the-structural-break-challenge-2026" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="ADIA Lab Structural Breaks Competition"
->
-Visit official competition →
-</a>
-</div>
-</article>
-  
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/KN Hack.png" alt="KN Hack" />
-</div>
+    <section class="doors-section" id="doors" aria-labelledby="doors-title">
+      <div class="section-heading">
+        <p class="section-kicker">Choose your route</p>
+        <h2 id="doors-title">Here are the doors. Pick the one that fits where you are.</h2>
+        <p>
+          You do not need to learn everything at once. Start with a route, build something small,
+          then branch out when the questions become real.
+        </p>
+      </div>
 
-<div class="competition-content">
-<div class="competition-meta">Investing · Research · Crypto,ETFs,Stocks</div>
-<h3>KN Hack Research Challenge</h3>
-<p>
-The KN Hack 2026 is a team-based investment strategy challenge (teams of 2 to 4 members) open to students, investors, and anyone eager to learn, compete, and build real-world research skills
-</p>
+      <div class="doors-grid">
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/start">
+          <span>Beginner route</span>
+          <h3>I have no clue where to start.</h3>
+          <p>Basic orientation, vocabulary, maths, Python, finance intuition, and the first small projects.</p>
+        </a>
 
-<div class="competition-tags">
-<span>ETFs Allocation</span>
-<span>Stock Picking</span>
-<span>Crypto Strategies</span>
-</div>
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/algo">
+          <span>Algorithmic trading</span>
+          <h3>I want to build strategies.</h3>
+          <p>Backtests, signals, market regimes, transaction costs, inventory, and practical execution logic.</p>
+        </a>
 
-<p class="competition-status">Deadline 10th of May 2026</p>
-<a 
-class="competition-link" 
-href="https://www.kaxanuk.mx/kn-hack" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="KN Hack 2026 Competition"
->
-Visit official competition →
-</a>
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/competitions">
+          <span>Competitions</span>
+          <h3>I want to learn by competing.</h3>
+          <p>IMC Prosperity, Optiver, Numerai, Kaggle finance challenges, and competition preparation notes.</p>
+        </a>
 
-</div>
-</article>
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/risk">
+          <span>Risk & banking</span>
+          <h3>I want the institutional route.</h3>
+          <p>Credit risk, market risk, VaR, CVaR, stress tests, regulation, portfolios, and model validation.</p>
+        </a>
 
-  
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/resources">
+          <span>Resources</span>
+          <h3>I want books, channels, forums, and tools.</h3>
+          <p>A curated list of learning material, communities, creators, papers, code, and useful references.</p>
+        </a>
 
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/hull.png" alt="Hull Tactical" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Investing · Forecasting · Portfolio strategy</div>
-<h3>Hull Tactical Competition</h3>
-<p>
-A quantitative investing competition focused on predicting excess market returns and building a
-daily allocation strategy designed to outperform the S&amp;P 500.
-Participants use public and proprietary market data to uncover robust signals while staying within
-a 120% volatility constraint.
-</p>
-
-<div class="competition-tags">
-<span>Predictive signals</span>
-<span>Portfolio allocation</span>
-<span>Volatility constraint</span>
-</div>
-
-<p class="competition-status">
-Competition ends on 16th of June 2026
-</p>
-
-<a 
-class="competition-link" 
-href="https://www.kaggle.com/competitions/hull-tactical-market-prediction" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Visit IMC Prosperity competition website"
->
-Visit official competition →
-</a>
-</div>
-</article>
-
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/WQ.jpg" alt="IQC" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Quant Research · Alpha Signals · Systematic Strategy</div>
-<h3>International Quant Competition</h3>
-<p>
-A global quantitative research competition focused on building predictive alphas,
-testing market signals, and developing systematic trading ideas.
-Participants learn how data, modelling, and portfolio construction come together
-in practical quant research.
-</p>
-
-<div class="competition-tags">
-<span>Alpha research</span>
-<span>Signal modelling</span>
-<span>Systematic trading</span>
-</div>
-
-<p class="competition-status">
-Competition runs phase 1 from 18 March 2026 till 18 May 2026
-</p>
-
-<a 
-class="competition-link" 
-href="https://www.worldquant.com/brain/iqc/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Visit IQC competition website"
->
-Visit official competition →
-</a>
-</div>
-</article>
-
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/Numerai.jpg" alt="Numerai Competition" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Machine learning · Finance · Prediction</div>
-<h3>Numerai Competition</h3>
-<p>
-A machine learning tournament where participants build predictive models on abstracted financial
-data, aiming to generate robust signals for live market-neutral strategies.
-</p>
-
-<div class="competition-tags">
-<span>Machine learning</span>
-<span>Signals</span>
-<span>Prediction</span>
-</div>
-
-<p class="competition-status">
-Ongoing · Regular tournament format
-</p>
-
-<a 
-class="competition-link" 
-href="https://numer.ai/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Visit Numerai website and competition"
->
-Visit official competition →
-</a>
-</div>
-</article>
-
-  
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/IMC.png" alt="IMC Prosperity competition" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Market making · Strategy · Python</div>
-<h3>IMC Prosperity</h3>
-<p>
-A global algorithmic trading challenge where participants build strategies across multiple
-simulated markets, combining market making, statistical arbitrage, risk management, and
-game-style trading decisions.
-</p>
-
-<div class="competition-tags">
-<span>Algorithmic trading</span>
-<span>Market structure</span>
-<span>Backtesting</span>
-</div>
-
-<p class="competition-status">Finished on 30th of April · Not currently open</p>
-<a 
-class="competition-link" 
-href="https://prosperity.imc.com/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Visit IMC Prosperity Competition website"
->
-Visit official competition →
-</a>
-</div>
-</article>
-
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/Optiver.png" alt="Optiver Ready Trader Go competition" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Market making · Exchange simulation · Coding</div>
-<h3>Optiver Ready Trader Go</h3>
-<p>
-A trading competition focused on building automated market-making bots that interact with
-a simulated exchange, manage inventory, quote prices, and respond to fast-changing market conditions.
-</p>
-
-<div class="competition-tags">
-<span>Market making</span>
-<span>Inventory risk</span>
-<span>Exchange bots</span>
-</div>
-
-<p class="competition-status">Finished · Not currently open</p>
-<a 
-class="competition-link" 
-href="https://readytradergo.optiver.com/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Visit Optiver Ready Trader Go Competition website"
->
-Visit official competition →
-</a>
-</div>
-</article>
-  
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/Citadel Terminal.png" alt="Citadel Terminal Competition" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Markets · Decision making · Trading simulation</div>
-<h3>Citadel Terminal</h3>
-<p>
-A market simulation challenge where participants work through trading decisions, competitive
-strategy, and market intuition in a structured finance-focused environment.
-</p>
-
-<div class="competition-tags">
-<span>Trading game</span>
-<span>Market intuition</span>
-<span>Strategy</span>
-</div>
-
-<p class="competition-status">
-Finished · Not currently open
-</p>
-
-<a 
-class="competition-link" 
-href="https://www.citadelsecurities.com/careers/programs-and-events/terminal/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="Citadel Terminal Competition"
->
-Visit official competition →
-</a>
-
-</div>
-</article>
-
-
-<article class="competition-card">
-<div class="competition-image">
-<img src="utils/CUATS.png" alt="CUATS Competition" />
-</div>
-
-<div class="competition-content">
-<div class="competition-meta">Algorithmic Trading · QuantConnect · Portfolio Strategy</div>
-<h3>CUATS Challenge</h3>
-<p>
-A QuantConnect-based trading challenge where Cambridge students and postdocs build backtestable
-algorithms starting with USD 100,000, aiming for strong alpha, high Sharpe ratio, controlled
-drawdown, and clear methodology.
-</p>
-<div class="competition-tags">
-<span>Backtesting</span>
-<span>Sharpe ratio</span>
-<span>Drawdown control</span>
-</div>
-
-<p class="competition-status">Finished · Not currently open</p>
-<a 
-class="competition-link" 
-href="https://www.cuats.co.uk/challenge2026/" 
-target="_blank" 
-rel="noopener noreferrer"
-aria-label="CUATS 2026 Competition"
->
-Visit official competition →
-</a>
-
-</div>
-</article>
-
-</div>
-</section>
-
-  </div>
-</section>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+        <a class="door-card" href="https://tomorrowquantarchive.github.io/community">
+          <span>Community</span>
+          <h3>I do not want to learn alone.</h3>
+          <p>Discords, forums, LinkedIn groups, YouTube channels, and people worth following.</p>
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -697,61 +178,51 @@ Visit official competition →
     </div>
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const siteHeader = document.getElementById("siteHeader");
+      const menuToggle = document.getElementById("menuToggle");
+      const headerDropdown = document.getElementById("headerDropdown");
 
+      if (!siteHeader || !menuToggle || !headerDropdown) return;
 
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const siteHeader = document.getElementById("siteHeader");
-    const menuToggle = document.getElementById("menuToggle");
-    const headerDropdown = document.getElementById("headerDropdown");
-
-    if (!siteHeader || !menuToggle || !headerDropdown) return;
-
-    function updateHeaderState() {
-      const hero = document.querySelector(".hero");
-      const heroHeight = hero ? hero.offsetHeight : 320;
-
-      if (window.scrollY > heroHeight - 100) {
-        siteHeader.classList.add("is-scrolled");
-      } else {
-        siteHeader.classList.remove("is-scrolled");
+      function updateHeaderState() {
+        if (window.scrollY > 24) {
+          siteHeader.classList.add("is-scrolled");
+        } else {
+          siteHeader.classList.remove("is-scrolled");
+        }
       }
-    }
 
-    menuToggle.addEventListener("click", function (event) {
-      event.stopPropagation();
-
-      const isOpen = headerDropdown.classList.toggle("is-open");
-      menuToggle.classList.toggle("is-open", isOpen);
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    headerDropdown.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        headerDropdown.classList.remove("is-open");
-        menuToggle.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const isOpen = headerDropdown.classList.toggle("is-open");
+        menuToggle.classList.toggle("is-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
       });
+
+      headerDropdown.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          headerDropdown.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        const clickedToggle = menuToggle.contains(event.target);
+        const clickedDropdown = headerDropdown.contains(event.target);
+
+        if (!clickedToggle && !clickedDropdown) {
+          headerDropdown.classList.remove("is-open");
+          menuToggle.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      window.addEventListener("scroll", updateHeaderState);
+      updateHeaderState();
     });
-
-    document.addEventListener("click", function (event) {
-      const clickedToggle = menuToggle.contains(event.target);
-      const clickedDropdown = headerDropdown.contains(event.target);
-
-      if (!clickedToggle && !clickedDropdown) {
-        headerDropdown.classList.remove("is-open");
-        menuToggle.classList.remove("is-open");
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    window.addEventListener("scroll", updateHeaderState);
-    window.addEventListener("load", updateHeaderState);
-    updateHeaderState();
-  });
-</script>
+  </script>
 </body>
 </html>
